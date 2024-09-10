@@ -49,10 +49,11 @@ body{
     text-decoration: none;
     font-weight: 500;
     transition: .3s;
-    display:contents;
+    display:inline-block;
+    margin-left: 20px;
 }
-.navbar a:not(:last-child) {
-    margin-left: 50px;
+.navbar a:first-child{
+    margin-left: 0;
 }
 .navbar a:hover,
 .navbar a.active {
@@ -275,7 +276,7 @@ body{
     right:0;
     width:120%;
     height:100%;
-    background:#10e4eb;
+    background:#081b29;
     animation: showRight 1s ease forwards;
     animation-delay: 3s;
     z-index: 100;
