@@ -23,6 +23,17 @@ body{
     z-index: 100;
 }
 
+.header-project , .header-about {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #081b29;
+    z-index: 100;
+}
+
 .logo{
     position: relative;
     font-size: 25px;
@@ -286,5 +297,124 @@ body{
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+
+/*About Page*/
+.about {
+    padding: 120px;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.info-card, .education-card, .interest-card {
+    background-color: #10e4eb;
+    border-radius: 30px;
+    padding: 90px;
+    text-align: justify;
+    width: 600px;
+}
+
+.info-card img, .education-card img, .interest-card img {
+    width: 250px;
+    height: 250px;
+}
+
+.active2{
+    font-size: 49px;
+    color:#10e4eb;
+    top: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .about-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/*Projects Page*/
+.project-page{
+    background-color: #081b29;
+    color: #ededed;
+    margin:0;
+    padding-top: 120px;
+}
+
+.project-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.project-content div{
+    width: 45%;
+    border-radius: 30px;
+    padding: 90px;
+    text-align: justify;
+}
+.project-content h3{
+    color: #10e4eb;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.active3{
+    font-size: 49px;
+    color:#10e4eb;
+    top: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+@media screen and (max-width: 1024px){
+    .project-content div {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-content div{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-page {
+        padding: 50px 5%;
     }
 }
