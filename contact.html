@@ -16,12 +16,16 @@
         </header>
         <section class="contact-container">
             <div class="contact">
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Please enter your name">
+                    <input type="hidden" name="access_key" value="ba831fe1-f32b-4932-b4e6-2cfeae9aca06">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" placeholder="Enter your email" required>
 
                     <label for="reason">Reason for reaching out:</label>
-                    <select id="reason">
+                    <select name="reason" id="reason">
                         <option value="" selected>Select the reason from the dropdown below</option>
                         <option value="collaboration">Collaboration</option>
                         <option value="job offer">Job Offer</option>
@@ -29,7 +33,7 @@
                     </select>
 
                     <label for="message">Detailed message:</label>
-                    <textarea id="message" placeholder="Enter your detailed message here"></textarea>
+                    <textarea name="message" id="message" placeholder="Enter your detailed message here"></textarea>
 
                     <button type="submit">Submit</button>
                 </form>
