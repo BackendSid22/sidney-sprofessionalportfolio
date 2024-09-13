@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;60;700;800;900&display=swap');
+/*Home Page*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
@@ -8,7 +10,8 @@
 }
 
 body{
-    color:#ededed
+    color:#ededed;
+    background-color: #081b29;
 }
 
 .header {
@@ -48,10 +51,10 @@ body{
 
 .logo{
     position: relative;
-    font-size: 25px;
+    font-size: 40px;
     color: #ededed;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .logo::before {
@@ -80,7 +83,8 @@ body{
 }
 .navbar a:hover,
 .navbar a.active {
-    color: #10e4eb
+    color: #10e4eb;
+    transform: scale(1.1);
 }
 
 .home{
@@ -98,7 +102,6 @@ body{
 }
 
 .home-content h1{
-    position: relative;
     font-size: 66px;
     font-weight: 700;
     color:#ededed;
@@ -117,7 +120,6 @@ body{
 }
 
 .home-content h3{
-    position: relative;
     font-size: 40px;
     font-weight: 700;
     color:#10e4eb;
@@ -137,7 +139,7 @@ body{
 
 .home-content p{
     position: relative;
-    font-size: 24px;
+    font-size: 18px;
     color:#ededed;
     margin: 20px 0 40px;
 }
@@ -156,7 +158,7 @@ body{
 .home-content .btn-box{
     position: relative;
     display: flex;
-    justify-content:left;
+    justify-content:space-between;
     width: 345px;
     height: 50px;
 }
@@ -204,7 +206,7 @@ body{
     background: #10e4eb;
     color:#081b29;
     z-index: -1;
-    border-radius: 25px;
+    border-radius: 26px;
     transition: .5s;
 }
 
@@ -213,7 +215,9 @@ body{
 }
 
 .btn-box a:hover{
-    color:#081b29
+    color:#081b29;
+    color: #ededed;
+    transform: scale(1.1);
 }
 
 .home-icon {
@@ -297,18 +301,234 @@ body{
     position: absolute;
     top:0;
     right:0;
-    width:120%;
+    width:100%;
     height:100%;
     background:#081b29;
     animation: showRight 1s ease forwards;
     animation-delay: 3s;
     z-index: 100;
 }
-
+  
 /*KEYFRAMES ANIMATION */
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+    
+}
+
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .home-content h1 {
+        font-size: 50px;
+    }
+
+    .home-content h3 {
+        font-size: 35px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .btn-box {
+        width: 300px;
+    }
+
+    .btn-box a {
+        width: 140px;
+        font-size: 18px;
+    }
+
+    .home-icon {
+        width: 150px;
+    }
+
+    .home-icon a {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .home-imgHover {
+        display: none; /* Hide image hover effect on smaller screens */
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .btn-box {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .btn-box a {
+        width: 130px;
+        font-size: 16px;
+    }
+
+    .home-icon {
+        width: 130px;
+    }
+
+    .home-icon a {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .btn-box a {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .home-icon a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    /* Minimal animations on small screens */
+    .home-content h1::before,
+    .home-content h3::before,
+    .home-content p::before,
+    .btn-box::before,
+    .home-icon::before {
+        animation: none;
+    }
+
+    .home-imgHover {
+        display: none;
+    }
+}
+/* For devices with width of 1024px and above (tablets and desktops) */
+@media only screen and (min-width: 1024px) {
+    .home-content h1 {
+        font-size: 66px;
+    }
+    .home-content h3 {
+        font-size: 40px;
+    }
+    .btn-box a {
+        width: 150px;
+    }
+    .home-icon a {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+}
+
+/* For tablets and small laptops (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .home-content h1 {
+        font-size: 48px;
+    }
+    .home-content h3 {
+        font-size: 32px;
+    }
+    .btn-box a {
+        width: 120px;
+        font-size: 16px;
+    }
+    .home-icon a {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+/* For mobile devices (480px to 767px) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .header, .header-project, .header-about, .header-services, .header-contact {
+        padding: 15px 5%;
+    }
+    .home-content h1 {
+        font-size: 36px;
+    }
+    .home-content h3 {
+        font-size: 28px;
+    }
+    .btn-box a {
+        width: 100px;
+        font-size: 14px;
+    }
+    .home-icon a {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* For smaller mobile devices (max-width: 479px) */
+@media only screen and (max-width: 479px) {
+    .header, .header-project, .header-about, .header-services, .header-contact {
+        padding: 10px 2%;
+    }
+    .home-content h1 {
+        font-size: 28px;
+    }
+    .home-content h3 {
+        font-size: 20px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .btn-box a {
+        width: 80px;
+        font-size: 12px;
+    }
+    .home-icon a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+/* Keyframes for smoother animations */
+@media only screen and (max-width: 767px) {
+    .home-content h1::before, .home-content h3::before, .home-content p::before, 
+    .home-icon::before, .btn-box::before {
+        animation: showRight 0.5s ease forwards; /* Reduced animation time */
+        animation-delay: 0.2s;
+    }
+
+    .home-imgHover {
+        transition: .2s; /* Faster hover effect for smaller screens */
     }
 }
 
@@ -335,19 +555,29 @@ body{
     margin: 60px 0;
 }
 
-.info-card, .education-card, .interest-card {
+.info-card, .education-card, .interest-card, .programming-card{
     background-color: #10e4eb;
     border-radius: 30px;
-    padding: 90px;
-    text-align: justify;
-    width: 600px;
+    padding: 50px;
+    text-align:center;
+    max-width: 600px;
+    transition: transform 0.3s ease;
 }
 
-.info-card img, .education-card img, .interest-card img {
+.info-card, .education-card, .interest-card, .programming-card {
+    font-weight: 500px;
+}
+.info-card, .education-card, .interest-card, .programming-card  p{
+    font-size: 18px;
+}
+
+.info-card img, .education-card img, .interest-card img, .programming-card img {
     width: 250px;
     height: 250px;
 }
-
+.info-card:hover, .education-card:hover, .interest-card:hover, .programming-card:hover{
+    transform: scale(1.05);
+}
 .active2{
     font-size: 49px;
     color:#10e4eb;
@@ -357,11 +587,106 @@ body{
 }
 
 
+/* Media Queries for Responsiveness */
 
-@media screen and (max-width: 768px) {
+/* Tablets and Small Screens */
+@media screen and (max-width: 1024px) {
     .about-cards {
         flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .info-card, .education-card, .interest-card, .programming-card {
+        width: 80%;
+        padding: 30px;
+        max-width: none;
+    }
+
+    .about-content h1 {
+        font-size: 42px;
+    }
+
+    .about-content p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .info-card img, .education-card img, .interest-card img, .programming-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .active2 {
+        font-size: 45px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 60px;
+    }
+
+    .about-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-card, .education-card, .interest-card, .programming-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .info-card img, .education-card img, .interest-card img, .programming-card img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-content h1 {
+        font-size: 36px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .active2 {
+        font-size: 40px;
+    }
+}
+
+/* Small Mobile Phones */
+@media screen and (max-width: 480px) {
+    .about {
+        padding: 40px;
+    }
+
+    .about-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .about-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-card, .education-card, .interest-card, .programming-card {
         width: 100%;
+        padding: 15px;
+    }
+
+    .info-card img, .education-card img, .interest-card img, .programming-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .active2 {
+        font-size: 35px;
     }
 }
 
@@ -404,6 +729,9 @@ body{
     margin: 0 auto 20px;
     display: block;
 }
+.project-content a:visited{
+    color:#10e4eb;
+}
 
 .active3{
     font-size: 49px;
@@ -413,21 +741,88 @@ body{
     text-align: right;
 }
 
-@media screen and (max-width: 1024px){
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Screens and Smaller Laptops */
+@media screen and (max-width: 1024px) {
     .project-content div {
-        width: 48%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .project-content div{
         width: 100%;
+        padding: 60px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+    }
+
+    .project-content p {
+        font-size: 15px;
+    }
+
+    .active3 {
+        font-size: 42px;
     }
 }
 
+/* Mobile Screens */
 @media screen and (max-width: 768px) {
     .project-page {
-        padding: 50px 5%;
+        padding-top: 80px;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-content div {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    .active3 {
+        font-size: 38px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .project-page {
+        padding-top: 60px;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-content div {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 18px;
+    }
+
+    .project-content p {
+        font-size: 13px;
+    }
+
+    .project-content img {
+        max-width: 90%;
+    }
+
+    .active3 {
+        font-size: 32px;
     }
 }
 
@@ -452,19 +847,37 @@ body{
 .services-cards {
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    gap: 40px;
-    margin: 60px 0;
+    flex-wrap: wrap;
 }
+
 
 .webdd-card, .graphic-card, .va-card{
     background-color: #10e4eb;
     border-radius: 30px;
     padding: 90px;
-    text-align:justify;
+    text-align:center;
     width: 600px;
+    margin: 20px;
 }
 
+.webdd-card img, .graphic-card img, .va-card img{
+    width:250px;
+    height:250px;
+    margin: 0 auto;
+    display: block;
+}
+
+.webdd-card h3, .graphic-card h3, .va-card h3{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.webdd-card p, .graphic-card p, .va-card p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.webdd-card:hover, .graphic-card:hover, .va-card:hover {
+    animation: bounce 1s infinite;
+}
 .active4 {
     font-size: 49px;
     color: #10e4eb;
@@ -472,14 +885,94 @@ body{
     font-weight: bold;
     text-align: right;
 }
-
-@media screen and (max-width: 768px) {
-    .services-cards {
-        flex-direction: column;
-        width: 100%;
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }
 
+/* Media Queries for Responsiveness */
+
+/* Tablet Screens and Smaller Laptops */
+@media screen and (max-width: 1024px) {
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .webdd-card, .graphic-card, .va-card {
+        width: 80%;
+        padding: 60px;
+    }
+
+    .webdd-card h3, .graphic-card h3, .va-card h3 {
+        font-size: 22px;
+    }
+
+    .webdd-card p, .graphic-card p, .va-card p {
+        font-size: 16px;
+    }
+
+    .active4 {
+        font-size: 42px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .services {
+        padding-top: 80px;
+    }
+
+    .webdd-card, .graphic-card, .va-card {
+        width: 90%;
+        padding: 40px;
+    }
+
+    .webdd-card h3, .graphic-card h3, .va-card h3 {
+        font-size: 20px;
+    }
+
+    .webdd-card p, .graphic-card p, .va-card p {
+        font-size: 15px;
+    }
+
+    .active4 {
+        font-size: 38px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .services {
+        padding-top: 60px;
+    }
+
+    .webdd-card, .graphic-card, .va-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .webdd-card h3, .graphic-card h3, .va-card h3 {
+        font-size: 18px;
+    }
+
+    .webdd-card p, .graphic-card p, .va-card p {
+        font-size: 14px;
+    }
+
+    .webdd-card img, .graphic-card img, .va-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .active4 {
+        font-size: 32px;
+    }
+}
 
 /*Contact Page*/
 .contact-body{
@@ -562,3 +1055,88 @@ button{
 button:hover {
     background-color: #0bd1d8;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Screens and Smaller Laptops */
+@media screen and (max-width: 1024px) {
+    .contact {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .active5 {
+        font-size: 42px;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 768px) {
+    .contact {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .active5 {
+        font-size: 36px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.85rem;
+        padding: 7px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .contact-container {
+        margin-top: 100px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .active5 {
+        font-size: 30px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
