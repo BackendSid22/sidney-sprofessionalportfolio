@@ -1,0 +1,39 @@
+<!--Contact Page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+    <body class="contact-body">
+        <header class="header-contact">
+            <a href="home.html" class="logo">S.B</a>
+            <a class="active5">Contact</a>
+        </header>
+        <section class="contact-container">
+            <div class="contact">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Please enter your name">
+
+                    <label for="reason">Reason for reaching out:</label>
+                    <select id="reason">
+                        <option value="" selected>Select the reason from the dropdown below</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="job offer">Job Offer</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Detailed message:</label>
+                    <textarea id="message" placeholder="Enter your detailed message here"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
