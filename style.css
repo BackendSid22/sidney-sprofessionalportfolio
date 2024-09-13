@@ -23,13 +23,25 @@ body{
     z-index: 100;
 }
 
-.header-project , .header-about, .header-services {
+.header-project , .header-about, .header-services{
     position: fixed;
     width: 100%;
     padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #081b29;
+    z-index: 100;
+}
+.header-contact {
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
     background-color: #081b29;
     z-index: 100;
 }
@@ -426,6 +438,7 @@ body{
     color:#ededed;
     margin: 0;
     padding-top: 120px;
+    min-height: 100vh;
 }
 
 .services-content {
@@ -458,4 +471,94 @@ body{
     top: 10px;
     font-weight: bold;
     text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .services-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+/*Contact Page*/
+.contact-body{
+    background: #081b29;
+    color:#ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+    margin-top: 150px;;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact {
+    width: 900px;
+    background-color: #081b29;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #10e4eb;
+}
+
+.active5{
+    font-size: 49px;
+    color: #10e4eb;
+    top: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #10e4eb;
+    text-align: left;
+}
+
+input, select, textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #10e4eb;
+    color: #081b29;
+    font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #081b29;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+button{
+    background-color: #10e4eb;
+    color:#081b29;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color:#10e4eb;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #0bd1d8;
 }
