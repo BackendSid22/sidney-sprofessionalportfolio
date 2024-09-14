@@ -37,4 +37,4 @@ You can access my portfolio website at: **https://sidney-b-prof-portfolio.netlif
 
 ## NB: Contributors
 The contributors you see on the repo are one and the same person. One github account(sidnino707) was initially configured to my VS Code
-but had issues with logging in. I had to create the other one (BackendSid22) which now hosts all my repos. All changes made by sid707  are the same as BackendSid22. I will be deleting sid707 soon. 
+but had issues with logging in. I had to create the other one (BackendSid22) which now hosts all my repos. All changes made by sidnino707  are the same as BackendSid22. I will be deleting sid707 soon. 
